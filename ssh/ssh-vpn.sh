@@ -330,6 +330,7 @@ wget -q -O /usr/bin/xolpanel "https://raw.githubusercontent.com/IlhamStoree/v6/m
 wget -q -O /usr/bin/lock "https://raw.githubusercontent.com/IlhamStoree/v6/main/user-lock.sh"
 wget -q -O /usr/bin/unlock "https://raw.githubusercontent.com/IlhamStoree/v6/main/user-unlock.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/IlhamStoree/v6/main/update.sh"
+chmod +x xolpanel
 # Menu
 chmod +x menu
 chmod +x menu-trial
