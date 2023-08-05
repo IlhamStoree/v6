@@ -69,7 +69,7 @@ echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "SSH-UDP     : 1-65535" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "SSHUDP      : $domen:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
+echo -e "SSHUDP      : $IP:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "PORT SLWDNS : 443,80,53" | tee -a /etc/log-create-user.log
 echo -e "NS DOMAIN   : $sldomain" | tee -a /etc/log-create-user.log
@@ -106,7 +106,7 @@ echo -e "SSL/TLS     : 447 , 777" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "SSH-UDP     : 1-65535" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "SSH UDP     : $domen:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
+echo -e "SSH UDP     : $IP:1-65535@$Login:$Pass" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "PORT SLWDNS : 443,80,53" | tee -a /etc/log-create-user.log
 echo -e "NS DOMAIN   : $sldomain" | tee -a /etc/log-create-user.log
