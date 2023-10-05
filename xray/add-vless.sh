@@ -36,6 +36,9 @@ clear
 	done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
+read -p "limit ip ( DEVIC ) : " limit
+read -p "limit quota ( GB ): " quota
+read -p "limit bandwith ( GB ) :  " bw
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vless$/a\#& '"$user $exp"'\
@@ -51,6 +54,9 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[40;1;37m        Xray/Vless Account        \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
+echo -e "limit ip       : ${limit} ( Devic )"
+echo -e "limit quota    : ${quota} ( GB )"
+echo -e "limit bw       : ${bw} ( GB )"
 echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "port TLS       : $tls" | tee -a /etc/log-create-user.log
 echo -e "port none TLS  : $none" | tee -a /etc/log-create-user.log
