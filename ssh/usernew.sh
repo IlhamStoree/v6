@@ -97,7 +97,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "🔥Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "🔥Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "🔥limit ip    : $limit (DEVICE)" | tee -a /etc/log-create-user.log
-echo -e "Expired On    : $exp" | tee -a /etc/log-create-user.log
+echo -e "📅Expired On  : $exp" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "🔰IP          : $IP" | tee -a /etc/log-create-user.log
 echo -e "🔰Host        : $domen" | tee -a /etc/log-create-user.log
