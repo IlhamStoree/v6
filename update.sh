@@ -10,7 +10,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 echo ""
 version=$(cat /home/ver)
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/v5/main/version )
+ver=$( curl https://raw.githubusercontent.com/IlhamStoree/v6/main/version )
 clear
 # LINE COLOUR
 line=$(cat /etc/line)
@@ -28,7 +28,7 @@ Info1="${Green_font_prefix}($version)${Font_color_suffix}"
 Info2="${Green_font_prefix}(LATEST VERSION)${Font_color_suffix}"
 Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/v5/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/IlhamStoree/v6/main/newversion | grep $version )
 #Status Version
 if [ $version = $new_version ]; then
 sts="${Info2}"
@@ -58,7 +58,7 @@ read -p "PPlease Choose 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/v5/main/newversion | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/IlhamStoree/v6/main/newversion | grep $version )
 if [ $version = $new_version ]; then
 clear
 echo ""
@@ -86,7 +86,7 @@ sleep 1
 echo ""
 # UPDATE RUN-UPDATE
 cd /usr/bin
-wget -O run-update "https://raw.githubusercontent.com/${GitUser}/v5/main/update.sh"
+wget -O run-update "https://raw.githubusercontent.com/IlhamStoree/v6/main/update.sh"
 chmod +x run-update
 # RUN UPDATE
 echo ""
@@ -190,7 +190,7 @@ clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/v5/main/version )
+ver=$( curl https://raw.githubusercontent.com/IlhamStoree/v6/main/version )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""
