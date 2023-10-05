@@ -38,6 +38,9 @@ v2ray-menu
 	done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
+read -p "limit ip ( DEVIC ) : " limit
+read -p "limit quota ( GB ): " quota
+read -p "limit bandwith ( GB ) :  " bw
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmess$/a\### '"$user $exp"'\
@@ -56,7 +59,7 @@ acs=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "${domain}",
+      "host": "",
       "tls": "tls"
 }
 EOF`
@@ -71,7 +74,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "${domain}",
+      "host": "",
       "tls": "none"
 }
 EOF`
@@ -86,7 +89,7 @@ grpc=`cat<<EOF
       "net": "grpc",
       "path": "vmess-grpc",
       "type": "none",
-      "host": "${domain}",
+      "host": "",
       "tls": "tls"
 }
 EOF`
@@ -103,6 +106,9 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\\E[40;1;37m        Xray/Vmess Account        \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
+echo -e "limit ip       : ${limit} ( Devic )"
+echo -e "limit quota    : ${quota} ( GB )"
+echo -e "limit bw       : ${bw} ( GB )"
 echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
 echo -e "Port TLS       : 443" | tee -a /etc/log-create-user.log
 echo -e "Port none TLS  : 80" | tee -a /etc/log-create-user.log
