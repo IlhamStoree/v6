@@ -35,6 +35,9 @@ clear
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
+read -p "limit ip ( DEVIC ) : " limit
+read -p "limit quota ( GB ): " quota
+read -p "limit bandwith ( GB ) :  " bw 
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
 },{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
@@ -49,6 +52,9 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[40;1;37m        TROJAN ACCOUNT          \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Remarks      : ${user}"
+echo -e "limit ip     : ${limit}"
+echo -e "limit kuota  : ${quota}"
+echo -e "limit bw     : ${bw}"
 echo -e "Host/IP      : ${domain}"
 echo -e "port         : 443/80"
 echo -e "Key          : ${uuid}"
